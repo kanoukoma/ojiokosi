@@ -168,7 +168,7 @@ function appendLine(text, confidence=null, isInterim=false){
   const div = document.createElement('div');
   div.className = 'line';
   div.dataset.time = t.toISOString();
-  div.innerHTML = ` ${isInterim?'<em></em> ':''}${escapeHtml(text)} ${confidence?`<span style="color:#64748b">(conf:${(confidence*100).toFixed(0)}%)</span>`:''}`;
+  div.innerHTML = `【${time}】 ${escapeHtml(text)} ${confidence?`<span style="color:#64748b">(conf:${(confidence*100).toFixed(0)}%)</span>`:''}`;
   transcriptEl.appendChild(div);
   transcriptEl.scrollTop = transcriptEl.scrollHeight;
 }
