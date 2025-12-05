@@ -83,7 +83,7 @@
     .line {
       padding: 8px 0;
       border-bottom: 1px dashed #eef2ff;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 
     .meter-wrap {
@@ -168,7 +168,7 @@ function appendLine(text, confidence=null, isInterim=false){
   const div = document.createElement('div');
   div.className = 'line';
   div.dataset.time = t.toISOString();
-  div.innerHTML = `【${time}】 ${escapeHtml(text)} ${confidence?`<span style="color:#64748b">(conf:${(confidence*100).toFixed(0)}%)</span>`:''}`;
+  div.innerHTML = `【${time}】 ${isInterim?'<em>(interim)</em> ':''}${escapeHtml(text)} ${confidence?`<span style="color:#64748b">(conf:${(confidence*100).toFixed(0)}%)</span>`:''}`;
   transcriptEl.appendChild(div);
   transcriptEl.scrollTop = transcriptEl.scrollHeight;
 }
