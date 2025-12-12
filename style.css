@@ -1,7 +1,7 @@
 body {
       margin: 0;
       font-family: "Arial", sans-serif;
-      background: #fef6ff;
+      background: #ffffff;
       display: flex;
       flex-direction: column;
       height: 100vh;
@@ -28,7 +28,7 @@ body {
       line-height: 1.6;
       color: #333;
       overflow-y: auto;
-      border: 2px solid #416a9e;
+      border: 2px solid #4547ad;
     }
 
     #controls {
